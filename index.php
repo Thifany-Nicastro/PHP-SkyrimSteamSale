@@ -22,7 +22,7 @@
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-  <main role="main" class="inner cover">
+  <main role="main" class="inner cover mt-auto">
     <h1 class="cover-heading">Skyrim está em promoção?</h1>
     <p class="lead">Não.</p>
     <p class="lead">
