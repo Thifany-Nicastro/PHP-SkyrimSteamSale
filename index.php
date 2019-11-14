@@ -1,6 +1,6 @@
 <?php
     $appid = "489830";
-    $api_url = "https://store.steampowered.com/api/appdetails?appids=57690&cc=br&l=pt";
+    $api_url = "https://store.steampowered.com/api/appdetails?appids=$appid&cc=br&l=pt";
     $json = json_decode(file_get_contents($api_url), true);
     
     if ($json[$appid]["data"]["price_overview"]["discount_percent"] > 0)
@@ -26,7 +26,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/skyrim.css">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
@@ -40,9 +40,17 @@
   <main role="main" class="inner cover mt-auto">
     <h1 class="cover-heading">Is Skyrim on sale?</h1>
     <p class="lead"><?=$res;?></p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">GO!</a>
-    </p>
+    <?php
+        if ($res == "Yes!")
+        {
+    ?>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary">GO!</a>
+            </p>
+    <?php
+        }
+    ?>
+    
   </main>
 
   <footer class="mastfoot mt-auto">
