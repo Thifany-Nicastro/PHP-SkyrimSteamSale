@@ -45,7 +45,7 @@
         {
     ?>
             <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary">GO!</a>
+                <a href="https://store.steampowered.com/app/<?=$appid;?>" class="btn btn-lg btn-secondary">GO!</a>
             </p>
     <?php
         }
