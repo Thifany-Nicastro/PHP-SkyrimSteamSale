@@ -23,8 +23,8 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
   <main role="main" class="inner cover mt-auto">
-    <h1 class="cover-heading">Skyrim está em promoção?</h1>
-    <p class="lead">Não.</p>
+    <h1 class="cover-heading">Is Skyrim on sale?</h1>
+    <p class="lead">No.</p>
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary">GO!</a>
     </p>
