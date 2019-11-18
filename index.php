@@ -31,14 +31,14 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 
-    <title>Inicio</title>
+    <title><?php echo $lang['PAGE_TITLE']; ?></title>
 </head>
 
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
   <main role="main" class="inner cover mt-auto">
-    <h1 class="cover-heading">Is Skyrim on sale?</h1>
+    <h1 class="cover-heading"><?php echo $lang['MAIN_TITLE']; ?></h1>
     <p class="lead"><?=$res;?></p>
     <?php
         if ($res == "Yes!")
