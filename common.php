@@ -2,7 +2,11 @@
 
 if(isSet($_GET['lang']))
 {
-  $lang = $_GET['lang'];
+    $lang = $_GET['lang'];
+}
+else
+{
+    $lang = 'en';
 }
 
 switch ($lang) {
