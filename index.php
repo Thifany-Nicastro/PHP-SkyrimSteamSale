@@ -3,15 +3,6 @@
     $appid = "489830";
     $api_url = "https://store.steampowered.com/api/appdetails?appids=$appid&cc=br&l=pt";
     $json = json_decode(file_get_contents($api_url), true);
-    
-    if ($json[$appid]["data"]["price_overview"]["discount_percent"] > 0)
-    {
-        $res = "Yes!";
-    }
-    else
-    {
-        $res = "No.";
-    }
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +31,22 @@
 
   <main role="main" class="inner cover mt-auto">
     <h1 class="cover-heading"><?php echo $lang['MAIN_TITLE']; ?></h1>
-    <p class="lead"><?=$res;?></p>
     <?php
-        if ($res == "Yes!")
+        if ($json[$appid]["data"]["price_overview"]["discount_percent"] > 0)
         {
     ?>
+            <p class="lead"><?=$lang['RES_POSITIVE'];?></p>
             <p class="lead">
-                <a href="https://store.steampowered.com/app/<?=$appid;?>" class="btn btn-lg btn-secondary">GO!</a>
+                <a href="https://store.steampowered.com/app/<?=$appid;?>" class="btn btn-lg btn-secondary">
+                    <?=$lang['BUTTON_STEAM'];?>
+                </a>
             </p>
+    <?php
+        }
+        else
+        {
+    ?>
+            <p class="lead"><?=$lang['RES_NEGATIVE'];?></p>
     <?php
         }
     ?>
