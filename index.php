@@ -1,4 +1,5 @@
 <?php
+    include_once('common.php');
     $appid = "489830";
     $api_url = "https://store.steampowered.com/api/appdetails?appids=$appid&cc=br&l=pt";
     $json = json_decode(file_get_contents($api_url), true);
